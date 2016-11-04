@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>test</title>
+      <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery-1.12.4.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+               $(function() {
+                  $("#tooltip-8").tooltip({
+                     //use 'of' to link the tooltip to your specified input
+                     position: { of: '#myBtn', my: 'left top', at: 'right bottom' },
+                  }),
+                  $('#myBtn').click(function () {
+                     $('#tooltip-8').tooltip("open");
+                  });
+               });
+            </script>
+         </head>
+         <body style="padding:100px;">
+            <!-- HTML -->
+            <a id="tooltip-8" title="Message" href="#"></a>
+            <!-- <input id="myInput" type="text" name="myInput" value="0" size="7" /> -->
+            <input id="myBtn" type="submit" name="myBtn" value="myBtn" class="myBtn" />
+         </body>
+      </html>

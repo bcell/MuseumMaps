@@ -1,0 +1,74 @@
+<html>
+<head>
+
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-1.12.4.js"></script>
+	<script src="jquery-ui.js"></script>
+
+<script language="JavaScript">
+function point_it(event){
+	pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+	pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
+  var p = document.getElementById("pointer_div");
+	// document.getElementById("cross").style.left = (pos_x-1) ;
+	// document.getElementById("cross").style.top = (pos_y-15) ;
+	// document.getElementById("cross").style.visibility = "visible" ;
+	document.pointform.form_x.value = pos_x;
+	document.pointform.form_y.value = pos_y;
+	if (pos_x>350) {
+    document.pointform.side.value = "West"
+		$("#tooltip-1").tooltip( "option", "content", "West");
+	}else{
+    document.pointform.side.value = "East"
+		$("#tooltip-1").tooltip( "option", "content", "East");
+	}
+  // p.onclick = showAlert;
+}
+
+// function showAlert(event) {
+//   txt="offsetx is "
+//   pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+//   //alert(txt.concat(event.offsetX));
+//   alert(txt.concat(pos_x));
+// }
+
+</script><script>
+$(function() {
+	 $("#tooltip-1").tooltip({
+    content: "Sackler",
+		 track:true,
+		 close: function(event, ui)
+		 {
+				ui.tooltip.hover(function()
+				{
+					 $(this).stop(true).fadeTo(500, 1);
+					//  $(this).tooltip( "option", "content", "NowThis");
+				},
+				function()
+				{
+					 $(this).fadeOut('500', function()
+					 {
+							$(this).remove();
+					 });
+				});
+		 }
+	 });
+
+});
+</script>
+
+</head>
+<body>
+
+
+<form name="pointform" method="post">
+<div id="pointer_div" onclick="point_it(event)" style = "background-image:url('sun.jpg');width:500px;height:333px;">
+<!-- <img src="freer.png" id="cross" style="position:relative;visibility:hidden;z-index:2;"></div> -->
+<img src="freer.png" width=700 id="tooltip-1" class="tooltip-1" title="Sack">
+
+
+You pointed on x = <input type="text" name="form_x" size="4" /> - y = <input type="text" name="form_y" size="4" /> <br>
+It is on the <input type="text" name="side" size="8" /> side
+</form>
+</body>
+</html>

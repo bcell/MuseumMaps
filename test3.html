@@ -1,0 +1,51 @@
+<html>
+<head>
+<script language="JavaScript">
+function point_it(event){
+	pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+	pos_y = event.offsetY?(event.offsetY):event.pageY-document.getElementById("pointer_div").offsetTop;
+  var p = document.getElementById("pointer_div");
+	// document.getElementById("cross").style.left = (pos_x-1) ;
+	// document.getElementById("cross").style.top = (pos_y-15) ;
+	// document.getElementById("cross").style.visibility = "visible" ;
+	document.pointform.form_x.value = pos_x;
+	document.pointform.form_y.value = pos_y;
+  p.onclick = showAlert;
+}
+
+function showAlert(event) {
+  txt="offsetx is "
+  pos_x = event.offsetX?(event.offsetX):event.pageX-document.getElementById("pointer_div").offsetLeft;
+  //alert(txt.concat(event.offsetX));
+  alert(txt.concat(pos_x));
+}
+</script>
+
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script>
+$( function() {
+	$( document ).tooltip();
+} );
+</script>
+<style>
+label {
+	display: inline-block;
+	width: 5em;
+}
+</style>
+</head>
+<body>
+<!-- <form name="pointform" method="post">
+<div id="pointer_div" onclick="point_it(event)"> -->
+	<!-- style = "background-image:url('sun.jpg');width:500px;height:333px;"> -->
+<!-- <img src="freer.png" id="cross" style="position:relative;visibility:hidden;z-index:2;"></div> -->
+<label for="age"><img src="freer.png" id="cross" width="700"></label><input id="age" title="Sackler">
+
+<!-- You pointed on x = <input type="text" name="form_x" size="4" /> - y = <input type="text" name="form_y" size="4" /> -->
+</form>
+</body>
+</html>

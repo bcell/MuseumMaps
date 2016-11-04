@@ -1,0 +1,17 @@
+div, img {
+  margin: 0;
+}
+
+div {
+  padding: 0;
+}
+
+img {margin-top: -4px }
+
+p {
+    letter-spacing: -10px;
+}
+
+.menu{
+    white-space: nowrap;
+  }

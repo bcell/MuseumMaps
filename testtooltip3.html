@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>jQuery UI Tooltip functionality</title>
+      <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery-1.12.4.js"></script>
+      <script src="jquery-ui.js"></script>
+
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $("#tooltip-1").tooltip({
+              content: "<strong>Hi!</strong>",
+              track:true,
+               position: {
+                  my: "center bottom",
+                  at: "center bottom-10",
+                  collision: "none"
+               }
+            });
+            $("#tooltip-2").tooltip();
+         });
+      </script>
+   </head>
+   <body>
+      <!-- HTML -->
+         <!-- <label for="name">Name:</label> -->
+         <!-- <input id="tooltip-1" title="Enter You name"> -->
+         <p> </p><p></p><p></p>
+         <img src="freer.png" width="700" id="tooltip-1" title="Sackler">
+         <p><a id="tooltip-2" href="#" title="Nice tooltip">
+            I also have a tooltip
+         </a></p>
+   </body>
+</html>

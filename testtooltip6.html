@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>test</title>
+      <link rel="stylesheet" href="jquery-ui.css">
+      <script src="jquery-1.12.4.js"></script>
+      <script src="jquery-ui.js"></script>
+      <script>
+        $(function() {
+           $('.tooltip-9').tooltip({
+              items: 'a.tooltip-9',
+              content: 'Hello welcome…',
+              show: "slideDown", // show immediately
+              open: function(event, ui)
+              {
+                 ui.tooltip.hover(
+                 function () {
+                    $(this).fadeTo("slow", 0.5);
+                 });
+              }
+           });
+        });
+        $(function() {
+           $('.tooltip-10').tooltip({
+              items: 'a.tooltip-10',
+              content: 'Welcome to TutorialsPoint…',
+              show: "fold",
+              track:true,
+              close: function(event, ui)
+              {
+                 ui.tooltip.hover(function()
+                 {
+                    $(this).stop(true).fadeTo(500, 1);
+                 },
+                 function()
+                 {
+                    $(this).fadeOut('500', function()
+                    {
+                       $(this).remove();
+                    });
+                 });
+              }
+           });
+        });
+     </script>
+  </head>
+  <body style="padding:100px;">
+     <!-- HTML -->
+     <div id="target">
+        <a href="#" class="tooltip-9">Hover over me!</a>
+        <a href="#" class="tooltip-10">Hover over me too!</a>
+     </div>
+  </body>
+</html>
