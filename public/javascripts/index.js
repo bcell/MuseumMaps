@@ -1,42 +1,40 @@
-var canvas = d3.select("canvas").node(),
-    context = canvas.getContext("2d");
-    // path = d3.geoPath().projection(null).context(context); //v4
-var path = d3.geo.path().projection(null).context(context); //v3
+d3.csv("data/freer.csv", function (error, roomData) {
+  roomData.forEach(function (d) {
+    d['Bottom'] = +d['Bottom'];
+    d['Top'] = +d['Top'];
+    d['Left'] = +d['Left'];
+    d['Right'] = +d['Right'];
+    d['Width'] = d['Right']-d['Left'];
+    d['Height'] = d['Bottom']-d['Top'];
+  });
+  console.log(roomData);
 
-d3.json("/javascripts/freer1.json", function(error, ca) {
-  if (error) throw error;
+  var svg = d3.select("body").append("svg")
+            .attr("width", 1500)
+            .attr("height", 1300);
 
-  context.beginPath();
-  path(topojson.feature(ca, ca.objects.rooms));
-  context.fillStyle = "#baa"; //base color
-  context.fill();
+  var rects = svg.selectAll("rect")
+            .data(roomData)
+            .enter()
+            .append("rect");
 
-// d3.json("/javascripts/freer1.json", function(error, ca) {
-//   if (error) return console.error(error);
-//
-//   var subunits = topojson.feature(ca, ca.objects.rooms);
-  // features.selectAll("path") // "features" is not defined
-  // .data(topojson.feature(ca, ca.objects.rooms).features)
-  // .enter()
-  // .append("path")
-  // .attr("d", path)
-//
-//   Sets colors of fill and stroke for each district. Sets stroke width, too.
-//   .attr("fill", "#baa")
-//   .attr("stroke", "#aaa")
-//   .attr("stroke-width", .3)
+  var rectAttributes = rects
+            .attr("x", function (d) { return d.Left; })
+            .attr("y", function (d) { return (d.Top-200); })
+            .attr("width", function (d) { return d.Width; })
+            .attr("height", function (d) { return d.Height; })
+            .style("fill", "green");
+
+  var text = svg.selectAll("text")
+            .data(roomData)
+            .enter()
+            .append("text");
+
+  var textLabels = text
+            .attr("x", function(d) { return d.Left; })
+            .attr("y", function(d) { return (d.Top-200); })
+            .text(function (d) { return "Room #" + d.RoomNum; })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "20px")
+            .attr("fill", "red");
 });
-
-// var map = d3.geomap.choropleth()
-//     .geofile('/d3-geomap/topojson/countries/USA.json')
-//     .projection(d3.geo.albersUsa)
-//     .column('2012')
-//     .unitId('fips')
-//     .scale(1000)
-//     .legend(true);
-// d3.csv('/data/venture-capital.csv', function(error, data) {
-//
-//     d3.select('#map')
-//         .datum(data)
-//         .call(map.draw, map);
-// });
