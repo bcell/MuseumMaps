@@ -10,3 +10,19 @@ a {
 path:hover {
     fill: #72716c;
 }
+
+.museum-room {
+  fill: green;
+  transition: fill 0.2s linear;
+}
+
+.museum-room:hover {
+  fill: blue;
+}
+
+.museum-room-text {
+  margin: 10px;
+  padding: 10px;
+  fill: orange;
+  font-size: 20px;
+}
