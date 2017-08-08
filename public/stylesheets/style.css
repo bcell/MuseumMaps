@@ -10,3 +10,9 @@ a {
 path:hover {
     fill: #72716c;
 }
+
+
+#map {
+padding: 10px;
+}
+
