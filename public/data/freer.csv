@@ -1,20 +1,1 @@
-RoomNum,Name,Theme,Open,Special Exhibit,Museum,Top,Bottom,Left,Right,Area
-300,Courtyard,Garden,No,No,Freer,470,884,512,1066,"229,356"
-301,Special Exhibition Gallery,,No,No,Freer,208,358,952,1197,"36,750"
-302,Religious Arts of Japan,Japanese Religious Art,No,No,Freer,208,358,1208,1458,"37,500"
-303,Arts of Japan 1,Japanese Paintings,No,No,Freer,470,726,1325,1458,"34,048"
-304,Arts of Japan 2,Japanese Paintings,No,No,Freer,737,884,1325,1458,"19,551"
-305,Japanese Art,Japanese Paintings,No,No,Freer,470,884,1075,1234,"65,826"
-306,Empty?,,No,No,Freer,749,982,1396,1458,"14,446"
-307,Arts of the Islamic World,Islamic Art,No,No,Freer,993,1294,1217,1458,"72,541"
-308,South Asian and Himilayan Art,South Asian and Himilayan Art,No,No,Freer,993,1294,954,1206,"75,852"
-309,Ancient Chinese Jades,Ancient Chinese Artifacts,No,No,Freer,993,1294,478,620,"42,742"
-310,Ancient Chinese Bronzes,Ancient Chinese Artifacts,No,No,Freer,993,1294,327,467,"42,140"
-311,Ancient Chinese Buddhist Sculpture,Ancient Chinese Buddhist Sculpture,No,No,Freer,993,1294,118,317,"59,899"
-312,Silk Road Luxuries,Asian Art,No,No,Freer,749,982,118,251,"30,989"
-313,Chinese Art,Chinese Art,No,No,Freer,738,884,118,251,"19,418"
-314,Chinese Paintings,Chinese Paintings,No,No,Freer,470,884,340,500,"66,240"
-315,Korean Art,Korean Art,No,No,Freer,470,727,118,251,"34,181"
-316,The Peacock Room,Whistler,No,No,Freer,257,459,118,225,"21,614"
-317,Freer & Whistler: Points of Contact,Whistler,No,No,Freer,208,358,253,695,"66,300"
-318,Lobby,,No,No,Freer,993,1200,688,889,"41,607"
+RoomNum,Name,Theme,Open,Special Exhibit,Museum,Top,Bottom,Left,Right,Area,Gallery300,Courtyard,Garden,No,No,Freer,470,884,512,1066,"229,356",0301,Special Exhibition Gallery,,No,No,Freer,208,358,952,1197,"36,750",1302,Religious Arts of Japan,Japanese Religious Art,No,No,Freer,208,358,1208,1458,"37,500",1303,Arts of Japan 1,Japanese Paintings,No,No,Freer,470,726,1325,1458,"34,048",1304,Arts of Japan 2,Japanese Paintings,No,No,Freer,737,884,1325,1458,"19,551",1305,Japanese Art,Japanese Paintings,No,No,Freer,470,884,1075,1234,"65,826",1306,Empty?,,No,No,Freer,895,982,1396,1458,"14,446",1307,Arts of the Islamic World,Islamic Art,No,No,Freer,993,1294,1217,1458,"72,541",1308,South Asian and Himilayan Art,South Asian and Himilayan Art,No,No,Freer,993,1294,954,1206,"75,852",1309,Ancient Chinese Jades,Ancient Chinese Artifacts,No,No,Freer,993,1294,478,620,"42,742",1310,Ancient Chinese Bronzes,Ancient Chinese Artifacts,No,No,Freer,993,1294,327,467,"42,140",1311,Ancient Chinese Buddhist Sculpture,Ancient Chinese Buddhist Sculpture,No,No,Freer,993,1294,118,317,"59,899",1312,Silk Road Luxuries,Asian Art,No,No,Freer,895,982,118,251,"30,989",1313,Chinese Art,Chinese Art,No,No,Freer,738,884,118,251,"19,418",1314,Chinese Paintings,Chinese Paintings,No,No,Freer,470,884,340,500,"66,240",1315,Korean Art,Korean Art,No,No,Freer,470,727,118,251,"34,181",1316,The Peacock Room,Whistler,No,No,Freer,257,459,118,225,"21,614",1317,Freer & Whistler: Points of Contact,Whistler,No,No,Freer,208,358,253,695,"66,300",1318,Lobby,,No,No,Freer,993,1200,688,889,"41,607",00,Building,,No,No,Freer,188,1314,98,1478,"1,553,880",0
